@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialBinding: Databinding(),
+      // initialBinding: Databinding(),
       theme: ThemeData(
         primarySwatch: kPrimaryColor,
       ),
