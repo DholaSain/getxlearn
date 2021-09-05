@@ -19,7 +19,6 @@ class HomeViewController extends GetxController {
 
   @override
   void onClose() {
-    // TODO: implement onClose
     super.onClose();
   }
 }

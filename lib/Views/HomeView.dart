@@ -1,13 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:results/Controllers/authController.dart';
 import 'package:results/Controllers/homeViewController.dart';
 
 class HomeView extends StatelessWidget {
   final homeController = Get.find<HomeViewController>();
+  final authController = Get.find<AuthController>();
   TextEditingController text = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        actions: [
+          IconButton(
+              onPressed: () async {
+                await authController.signout();
+              },
+              icon: Icon(Icons.logout))
+        ],
+      ),
       body: Column(
         children: [
           Obx(
